@@ -3,8 +3,9 @@
 This module contains functions to generate and print Pascal's triangle.
 """
 
+
 def pascal_triangle(n):
-    """Returns a list of lists of integers representing the Pascal’s triangle of n."""
+    """Return Pascal’s triangle of n."""
     if n <= 0:
         return []
 
@@ -21,11 +22,11 @@ def pascal_triangle(n):
 
 
 def print_triangle(triangle):
-    """Prints the triangle."""
+    """Print the triangle."""
     for row in triangle:
         print("[{}]".format(",".join([str(x) for x in row])))
 
 
 if __name__ == "__main__":
-    n = int(input("Enter the number of rows for Pascal's triangle: "))
+    n = int(input("Enter rows for Pascal's triangle: "))
     print_triangle(pascal_triangle(n))
