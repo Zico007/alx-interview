@@ -13,3 +13,4 @@ def canUnlockAll(boxes):
             keys.update(boxes[key])
 
     return len(unlocked) == len(boxes)
+    
