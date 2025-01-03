@@ -1,13 +1,15 @@
+#!/usr/bin/python3
 def canUnlockAll(boxes):
-    unlocked_boxes = [0]
-    keys = boxes[0]
+    if not boxes:
+        return False
+
+    unlocked = [0]
+    keys = set(boxes[0])
 
     while keys:
-        new_keys = []
-        for key in keys:
-            if key < len(boxes) and key not in unlocked_boxes:
-                unlocked_boxes.append(key)
-                new_keys += boxes[key]
-        keys = new_keys
+        key = keys.pop()
+        if key not in unlocked and 0 <= key < len(boxes):
+            unlocked.append(key)
+            keys.update(boxes[key])
 
-    return len(unlocked_boxes) == len(boxes)
+    return len(unlocked) == len(boxes)
