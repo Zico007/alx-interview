@@ -7,16 +7,16 @@ representing Pascal’s Triangle up to `n` rows.
 """
 
 def pascal_triangle(n):
-        """
-        Determines if all boxes can be unlocked.
+"""
+Determines if all boxes can be unlocked.
 
-        Args:
-            boxes (list of lists): A list where each index represents a box 
-            and contains a list of keys to other boxes.
+Args:
+        boxes (list of lists): A list where each index represents a box 
+        and contains a list of keys to other boxes.
 
-        Returns:
-            bool: True if all boxes can be opened, False otherwise.
-        """
+Returns:
+        bool: True if all boxes can be opened, False otherwise.
+"""
   
     if n <= 0:
         return []
